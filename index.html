@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nocturnal - Perform the Impossible</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --glow-color: #facc15;
+      --dark-bg: #0a0a0a;
+      --card-bg: #1a1a1a;
+      --border-color: #2a2a2a;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: var(--dark-bg);
+      color: #e5e5e5;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .background-owl {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      max-width: 900px;
+      opacity: 0.02;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .full-page-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .full-page-section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 8px var(--glow-color), 0 0 15px var(--glow-color);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
+      transform: scale(1.05);
+    }
+
+    .glow-icon {
+      filter: drop-shadow(0 0 10px var(--glow-color)) drop-shadow(0 0 20px var(--glow-color));
+      animation: pulse-glow 4s infinite ease-in-out;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { filter: drop-shadow(0 0 10px var(--glow-color)) drop-shadow(0 0 20px var(--glow-color)); }
+      50% { filter: drop-shadow(0 0 20px var(--glow-color)) drop-shadow(0 0 40px var(--glow-color)); }
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body class="overscroll-none">
+
+  <!-- Background Owl -->
+  <img src="transparent.png" alt="Nocturnal Owl Icon" class="background-owl" />
+
+  <div class="content">
+    <!-- Hero Section -->
+    <header id="hero" class="full-page-section active bg-gradient-to-b from-black via-gray-900 to-gray-800">
+      <div class="w-full flex flex-col items-center justify-center">
+        <img src="transparent.png" alt="Nocturnal Owl Icon" class="w-52 md:w-72 glow-icon mb-8"/>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight glow-text leading-tight mb-4">
+          NOCTURNAL
+        </h1>
+        <p class="text-2xl md:text-3xl font-light text-gray-300 mb-4 max-w-2xl">
+          Use your phone as the hidden controller or don't. You can perform either way!
+        </p>
+        <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-xl">
+          The moment lands with the same impossible impact.
+        </p>
+        <a href="#about" class="text-gray-400 hover:text-white transition-colors">
+          <svg class="w-10 h-10 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Section 1: The Illusion -->
+    <section id="about" class="full-page-section bg-gray-950">
+      <div class="max-w-4xl px-6 mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6">The Ultimate Digital Illusion</h2>
+        <p class="text-lg md:text-xl text-gray-300 mb-6">
+          A spectator thinks of a name. You borrow their phone and place it on the table. With a simple gesture, the flashlight bursts to life. A moment later, the light fades — their screen reveals a search for the very name they only thought of.
+        </p>
+        <p class="text-lg md:text-xl text-yellow-400 font-semibold">
+          Use your phone as the hidden controller or don’t. You can perform either way — the moment lands with the same impossible impact.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: How It Works -->
+    <section id="how-it-works" class="full-page-section bg-gray-900">
+      <div class="max-w-5xl px-6 mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Invisible, Yet Powerful</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="card">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Seamlessly Integrated</h3>
+            <p class="text-gray-400">
+              The secret runs quietly behind the scenes, empowering you to focus on your performance. Nothing for the spectator to download, nothing for them to discover — only the magic they’ll remember.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Freedom of Choice</h3>
+            <p class="text-gray-400">
+              Use your phone as the hidden controller or don't. You can perform either way — the moment lands with the same impossible impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Modes & Features -->
+    <section id="modes" class="full-page-section bg-gray-950">
+      <div class="max-w-5xl px-6 mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Two Ways to Astonish</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-2 text-yellow-400">Real-Time Control</h3>
+            <ul class="text-gray-400 list-disc list-inside text-left">
+              <li>Respond to the audience in the moment</li>
+              <li>Adjust timing for maximum drama</li>
+              <li>Perfect for close-up or stage</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-2 text-yellow-400">Hands-Off Miracle</h3>
+            <ul class="text-gray-400 list-disc list-inside text-left">
+              <li>Set it and let it unfold automatically</li>
+              <li>Your phone stays out of sight</li>
+              <li>Their phone becomes the star</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Why Choose Nocturnal -->
+    <section id="why" class="full-page-section bg-gray-900">
+      <div class="max-w-4xl px-6 mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Why Choose Nocturnal?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Always Ready</h3>
+            <p class="text-gray-400">No need for elaborate setups or resets. Nocturnal is ready to perform whenever you are, whether on the street or on stage.</p>
+          </div>
+          <div class="card">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Built for Performers</h3>
+            <p class="text-gray-400">Practical, powerful, and designed with magicians in mind. Every detail serves your performance, not the other way around.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Call to Action -->
+    <section id="buy" class="full-page-section bg-gray-950">
+      <div class="container flex flex-col items-center px-6">
+        <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 glow-text">
+          Take Control of the Impossible.
+        </h2>
+        <p class="text-xl md:text-2xl font-light text-gray-300 mb-8 max-w-2xl">
+          Nocturnal gives you the freedom to perform with or without your own phone. Portable, reliable, unforgettable.
+        </p>
+        <a href="#" class="btn-primary px-12 py-5 rounded-full font-bold text-xl inline-block transition-transform duration-300">
+          Get Nocturnal Now
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.full-page-section');
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
